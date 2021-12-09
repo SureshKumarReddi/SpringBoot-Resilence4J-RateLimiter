@@ -1,0 +1,10 @@
+server:
+  port: 9098
+
+  
+resilience4j:
+  ratelimiter:
+    instances:
+      getMessageRateLimit.limit-for-period: 2
+      getMessageRateLimit.limit-refresh-period: 5s
+      getMessageRateLimit.timeout-duration: 0
